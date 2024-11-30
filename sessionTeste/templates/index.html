@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Session </title>
+</head>
+<body>
+
+    <!-- verificação se tem um usuário logado -->
+    {% if username != '' %} 
+    <h1> BEM-VINDO </h1>
+    <p>Nome do usuário logado: {{username}} </p>
+    <p>Senha do usuário logado: {{senha}} </p>
+    <p>Quer sair? <a href="/logout"> logout</a></p>
+
+    {% else %}
+
+    <h1> OPS! FAÇA LOGIN PRIMEIRO :D </h1>
+
+    <p>Você não está logado!</p>
+    <p>Faça login em: <a href="/login"> login</a></p>
+
+    {% endif %}
+
+</body>
+</html>
